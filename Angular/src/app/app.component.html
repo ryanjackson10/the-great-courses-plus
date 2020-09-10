@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body style="background-color: black;">
+
+    <div class="navbar">
+        <a href="#search"> <span class="glyphicon glyphicon-search"></span> <br> Search </a>
+        <a href="#account"><span class="glyphicon glyphicon-cog"></span> <br> Account </a>
+        <a href="#watchlist"><span class="glyphicon glyphicon-eye-open"></span> <br> Watchlist </a>
+        <a href="#categories"><span class="glyphicon glyphicon-th"></span> <br> Categories <span class="caret"></span> </a>
+        <a href="home"> <span class="glyphicon glyphicon-home"></span> <br> Home </a>
+        <img class="logo" style="height: 60px; margin-left: 20px; margin-top: 9px; cursor: pointer;" src="assets/TGCPlogo.png">
+      </div>
+      
+    <div class="main">
+        <img id="featuredImage">
+      <div class = "featuredText">
+        <h1 id="featuredTitle"></h1>
+        <p id="featuredInstructor"></p>
+        <p id="featuredDescription"></p>
+        <button id="watchButton"> Watch Instantly </button>
+      </div>
+      <hr style="margin-top: 80px; height:1px;border-width:0;background-color:#404040">
+    </div>
+
+    <h1 class="firstRow">{{ literatureCourses[0].course_category }}</h1>
+    <div class="location">
+    <div class="container">
+      <div class="inner">
+          <div *ngFor="let litCourse of literatureCourses" class="floatLeft">
+              <img src="{{ litCourse.course_image }}" class="tile">
+          </div>
+      </div>
+   </div>
+  </div>
+
+  <h1 class="standardRow">{{ ancientCourses[0].course_category }}</h1>
+  <div class="location">
+  <div class="container">
+    <div class="inner">
+        <div *ngFor="let ancientCourse of ancientCourses" class="floatLeft">
+            <img src="{{ ancientCourse.course_image }}" class="tile">
+        </div>
+    </div>
+ </div>
+</div>
+
+<h1 class="standardRow">{{ medievalCourses[0].course_category }}</h1>
+<div class="location">
+<div class="container">
+  <div class="inner">
+      <div *ngFor="let medievalCourse of medievalCourses" class="floatLeft">
+          <img src="{{ medievalCourse.course_image }}" class="tile">
+      </div>
+  </div>
+</div>
+</div>
+
+<h1 class="standardRow">{{ modernCourses[0].course_category }}</h1>
+<div class="location">
+<div class="container">
+  <div class="inner">
+      <div *ngFor="let modernCouse of modernCourses" class="floatLeft">
+          <img src="{{ modernCouse.course_image }}" class="tile">
+      </div>
+  </div>
+</div>
+</div>
+
+
+<h1 class="standardRow">{{ theologyCourses[0].course_category }}</h1>
+<div class="location">
+<div class="container">
+  <div class="inner">
+      <div *ngFor="let theologyCourse of theologyCourses" class="floatLeft">
+          <img src="{{ theologyCourse.course_image }}" class="tile">
+      </div>
+  </div>
+</div>
+</div>
+
+<h1 class="standardRow">{{ scienceCourses[0].course_category }}</h1>
+<div class="location">
+<div class="container">
+  <div class="inner">
+      <div *ngFor="let scienceCourse of scienceCourses" class="floatLeft">
+          <img src="{{ scienceCourse.course_image }}" class="tile">
+      </div>
+  </div>
+</div>
+</div>
+
+<h1 class="standardRow">{{ technologyCourses[0].course_category }}</h1>
+<div class="location">
+<div class="container">
+  <div class="inner">
+      <div *ngFor="let technologyCourse of technologyCourses" class="floatLeft">
+          <img src="{{ technologyCourse.course_image }}" class="tile">
+      </div>
+  </div>
+</div>
+</div>
+
+      
+</body>
+
+</html>
