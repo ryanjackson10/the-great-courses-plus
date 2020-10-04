@@ -14,7 +14,6 @@ import { DemoService } from './demo.service';   // our custom service, see below
 })
 export class AppComponent {
  
-  public foods;
   public courses;
   public featuredCourse;
   public literatureCourses;
